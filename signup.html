@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+
+        body{
+            background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        }
+
+        form{
+            padding:10px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            border-radius: 25px;
+        }
+
+        form>h1{
+            color:teal;
+
+        }
+        
+        form>p{
+            width:66%;
+            margin:auto;
+            text-align: left;
+            margin-bottom:40px;
+            font-size: 14px;
+        }
+
+        #sign-up{
+            width:35%;
+            margin:auto;
+            background-color: white;
+            text-align: center;
+            margin-top: 100px;
+            border-radius: 25px;
+        }
+
+        input,button{
+            margin-bottom:40px;
+            width:65%;
+            height:35px;
+            border:1px solid #ccc;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="sign-up">
+        
+        <form>
+            <h1>Sign up</h1>
+            <input type="text" placeholder="Email Address*" id="email"><br>
+            <input type="password" placeholder="Create Password*" id="password"><br>
+            <button id="save">Create An Account</button><br>
+            <p>By clicking "Create an Account", you agree to our Terms of Use and Privacy Policy, including the Use of Cookies and the transfer of your personal information to the United States, a jurisdiction that may not provide an equivalent level of data protection to the laws in your home country.</p>
+            <hr>
+            <h3>Already have an account? <a href="signin.html"> Sign In </a></h3>
+
+        </form>
+        
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    let userarray=JSON.parse(localStorage.getItem("user_sign_info")) || [];
+    document.querySelector("#save").addEventListener("click",getdata)
+
+
+    function getdata(){
+        event.preventDefault();
+        let EMAIL=document.querySelector("#email").value;
+        let PASSWORD=document.querySelector("#password").value;
+
+        let mandate="0123456789"
+        let symbol=["!","@","#","$","%","^","&","*","(",")","/",">","<","."];
+        let count1=0;
+        let count2=0;
+        for(i=0;i<PASSWORD.length;i++){
+            for(j=0;j<mandate.length;j++){
+                if(PASSWORD[i]===mandate[j]){
+                    count1++;
+                    break;
+                }
+            }
+        }
+
+        for(x=0;x<PASSWORD.length;x++){
+            for(y=0;y<symbol.length;y++){
+                if(PASSWORD[x]===symbol[y]){
+                    count2++;
+                    break;
+                }
+            }
+        }
+
+
+        if(EMAIL=="" || PASSWORD==""){
+            alert("Enter all the details");
+        } else if(PASSWORD.length<8){
+            alert("Password length must be between 8 and 20 characters");
+        } else if(count1==0 && count2==0){
+            alert("Your password must include atleat one numerical digit and special symbol");
+
+        }  else {
+
+            let obj={EMAIL,PASSWORD};
+            userarray.push(obj)
+            localStorage.setItem("user_sign_info",JSON.stringify(userarray));
+            alert("Signup Successfull")
+
+        }
+
+
+
+
+
+
+
+
+        
+
+    }
+</script>
