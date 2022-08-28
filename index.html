@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Crew: Clothes, Shoes & Accessories For Women, Men & Kids</title>
+    <script src="https://kit.fontawesome.com/766965e798.js" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #header{
+            display: flex;
+            border:1px solid #ccc;
+            justify-content: space-between;
+        }
+        #navbar{
+            width:55%;
+            display:flex;
+            /* border: 1px solid red; */
+            justify-content: space-around;
+        }
+
+        #navbar>h1{
+            margin-right: 30px;
+
+        }
+
+        #navbar>a{
+            margin-top:30px;
+            text-decoration: none;
+            
+        }
+
+        #search_bar{
+            /* border: 1px solid blue; */
+            width:30%;
+            padding-top: 30px; 
+        }
+
+        #search_bar>input[type=text],a{
+            margin-right: 30px;
+
+        }
+
+        #search_bar>input[type=text]{
+            height:25px;
+            width: 40%;
+            height:25px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #header+p{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        #image1{
+            margin-top:30px;
+            display:flex;
+        }
+
+        #image1>img{
+            width:50%;
+        }
+
+        #image2{
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top:40px;
+        }
+
+        #image2>img{
+            width:100%;
+            height:900px;
+        }
+
+
+        #image3{
+            margin-top:60px;
+            width:100%;
+            display:flex;
+
+        }
+
+        #image3>img{
+            width:25%;
+
+        }
+
+
+        #midsection{
+            
+
+            margin-top:70px;
+            display:flex;
+            justify-content: center;
+            gap:50px;
+            margin-bottom: 70px;;
+        }
+
+        #midsection>p{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        #midsection>div{
+           
+            width:50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+        }
+
+        #midsection>div>button{
+            padding:12px;
+            width:100%;
+            height:60px;
+            border: 1px solid #ccc;
+            background-color: white;
+    
+        }
+
+        #midsection>div>button:hover{
+            background-color: grey;
+        }
+
+        #bottom1{
+            background-color: #dde7ef;
+        }
+
+        #bottom1>div{
+
+            width:80%;
+            margin:auto;
+        }
+
+        #bottom_first{
+            
+            padding:7px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 70px;
+        }
+
+        #bottom_first>h3{
+            display: grid;
+            align-items:flex-end;
+        }
+        
+        #bottom_first>img{
+            width:20%;
+        }
+
+
+        #bottom_mid{
+            border-top: 3px solid black;
+            display:flex;
+            gap:20px;
+            margin-top:50px;
+        }
+
+       
+        #bottom_mid>div>img{
+            width:100%;
+        }
+
+        #bottom_mid>div>p,h2,h4{
+            text-align: left;
+
+        }
+
+        #bottom_mid>div>p{
+            font-size: 18px;
+        }
+
+        #bottom_mid>div>h2{
+            width:40%;
+            line-height: 30px;
+
+        }
+
+        #bottom_mid+p{
+            font-size: 60px;
+            text-align: left;
+
+        }
+
+        #bottom-end{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:20px;
+        }
+
+
+        #bottom-end>div>img{
+            width:80%;
+        }
+
+        #bottom-end>div>h2,p{
+            text-align: left;
+        }
+        #bottom-end>div>h2{
+            width:80%;
+        }
+
+        #bottom-end>div>p{
+            font-size: 18px;
+            text-decoration: underline;
+        }
+
+        #bottom1+p{
+            font-size: 30px;
+            margin-top: 80px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        #final1{
+            width:90%;
+            margin:auto;
+            display:flex;
+            gap:20px;
+        }
+
+        #final1>div>img{
+            width:80%;
+
+        }
+
+        #final1+p{
+            font-size: 30px;
+            margin-top: 80px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+
+        #final2{
+            width:90%;
+            margin:auto;
+            display:flex;
+            gap:20px;
+            margin-bottom: 50px;
+        }
+
+        #final2>div>img{
+            width:80%;
+
+        }
+
+        #footer{
+            text-align: center;
+            padding: 50px;
+        }
+
+        #footer>a:hover{
+            text-decoration: underline;
+        }
+
+
+        @media all and (min-width:375px) and (max-width:1180px){
+
+            #image1{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+            }
+
+            #image2{
+                grid-template-columns: repeat(1,1fr);
+            }
+
+            #image3{
+                 display:grid;
+                 grid-template-columns: repeat(1,1fr);
+           }
+
+           #midsection{
+                display:grid;
+                grid-template-columns: repeat(1,1fr);
+            }
+
+            #midsection>div{
+                display:grid;
+                grid-template-columns: repeat(1,1fr); 
+           }
+
+
+           #bottom_first{
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+            gap:50px;
+           }
+
+           #bottom_mid{
+               display:grid;
+               grid-template-columns: repeat(1,1fr);
+               gap:50px;
+            }
+
+          #bottom-end{
+            grid-template-columns: repeat(1,1fr);
+            gap:20px;
+          }
+
+        #final1{
+            display:grid;
+            grid-template-columns: repeat(1,1fr);            
+        }
+
+        #final2{
+           display:grid;
+           grid-template-columns: repeat(1,1fr);           
+        }
+
+
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <div id="header">
+        <div id="navbar">
+            <h1>J.CREW</h1>
+            <a href="">New</a>
+            <a href="">Women</a>
+            <a href="">Men</a>
+            <a href="">Kids</a>
+            <a href="">Swim</a>
+            <a href="">Cashmere</a>
+            <a href="">Home</a>
+            <a href="">Stories</a>
+            <a href="">Sale</a>
+        </div>
+        <div id="search_bar">
+            <input type="text" placeholder="Search J.crew">
+            <a href="signin.html">Sign In<span id="username"></span></a>
+            <a>Cart Page</a>
+        </div>
+    </div>
+    <p>Have a question we can help. *</p>
+
+    <div id="image1">
+        <img src="https://previews.dropbox.com/p/thumb/ABrk0dQ1rHO2yjMQVgWPDb-hnaA9wn3uHUV-KM5VwIbZhEnx8zzb2iNBfYg4agPIa7D_btCFza2U9ykRtcl3S-_BJQOcob3bF6D672-M2Gd8nBopMaCQ8VM1EkHefaliAkOlWEBQAgKNG3gjz50vfXr9wnft7nEpIr-chGPqDoXjyXjrRHCwdf3Da9paPRgvrYd4coyA85lKLGIE5_6e9duy5j0nvHtzuxjHLBM_ya2N2657w3P9FKmLPxkgHCGiAaDveIA8szhuX5pLbynjAsToxbFABRRJSUI_5jvpcsSy6BGaRagMGF9V4r2cgZN5bcDWmxAczZ-H6eSbPfa7sEW0yNFEJq45e0v1AGFYqMKQu-qStMpuTy6YZFbYpzw4WyQ/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABq-aJDa7_jDv3349JezAfskzL5JKAOvt2CCrHckE_yZnUTUDQgaFyH1k-pybUZ0SA2HJQbsbquxp6wCJHaX9VYGVZdxJhJyu4WqK_D93zb9g_le8FOgWxDxRW2nymp5YOhZBH7b3j9kmrZeXft2m9_onvft2XkdD7xHBmqO-SAH4g03e-xZdq1sEyYJuR1WLzvJJ4CNbqhVa5yjIGqmHKcy7fLIDWHvT54KivoqooUA25D7-LjkPgvApGzeAMplQYDq29zACsY-Bj9jpEXfvREVRnMLdT0rZh3FL38dJUiOUCoHfQtqOIg32cVuw4ako86fRC7ydm78iIiBbXOo0S-eJWf4mL3-MXgdd7APqEfwQY38-nlwSIhMCd2HRFf74ePWeQwMRlQ9iDXsEeCWHxRA/p.jpeg" alt="">
+    </div>
+
+    <div id="image2">
+        <img src="https://previews.dropbox.com/p/thumb/ABpfFyNKLmqiUyPHFdr1XMwt3ohEEVoYXFjWxwD-SihMnAn67e5oH6lU5DcVzvoUji2s34HzEYJjM05yKAVlSoctfxFd1yYusKik8l7_pgq9RDABVuUUEWeD4HG3cS4xy7jDd39JAt5tuURwIUav1smFalhADlZxMt0cJA7C44QrLOvlrywpuyAeq3U5X5NmiI_fZvLOIAdgxW8-9lH2J3zE1GKhnBYiIGxAeBJ9_74Yajr9vTlaPaBcQN_wKKPJMFMBO82pJWlild_kpWZ4SDrJ8lB3cgTcnjNiyJ2qMquKvKRVKKa-s57U1OIcnZ7uicYLA6NmqZlJ4jnPtkyMLPgIrUEAFajd7spk05-g_dssfB5ZBRAsw8POqDO8kRs1Xw9lL-3RYT8PtawSQGYfcVu9/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABqsID8wtnvu1UOzBaoLzx4nzUUxNrq4cPuw1Zx1mKvfcpRGeB2GFMBFjBmETJiwCGsNGxhbPviTUkA15yNKWAcnlRibgae5yyAoWq8VMZEdm7ZUw_VgeA-BHz7UIHybQf4Px4hhq5HXuw0ALZUFU1hIeU-Z4J6Z9JYsh2oDDaK462_9DnXSXMOeNZRIbNr62wFqShe90kAUPRSYnk9BS23yucPOpiiKHoOszQ12srL3kCQOb9VX_oQ_DYLUK07B9Fey9EkNpMbinC_1mtFIxVVyLfasAwiYnDtoqoqK9oD0wVVjfYl76nscLXJLUTWA4wk_4dd7-h7rcd91OMAa7wuNwFd39wmnFeoQnhSsPS1hM4nAiEiRkYpepHi9YpEi6YQQQotFEwLUe3gzYxCE54Gc/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABpAyrOXd_FrDzY1BzrdvIx4yO3rBvZ8ThSQXLkgEfer5LehuH_C6pZcLD9P8Xt5K-QQap8xbK3Mw4sNHaR0_Q1lVktddCTVHTxH8oVhDcbrH2OHTCxPvwDC8jhZI2o8QEkok3SZsQm37ZAT2pXXIraM7Vz5djQ9LxlxUZB_4zF6Aay8i2jdhb8BmIqWiMRlVg3ZIcu7fqFDuBysVZD42uMXhygjti229G9JOCsvwd-DV4gXreHAhz-xZhQP3JaSH_f9JB59EruMx5y0ygHrb1QZmw01fplKR9FQxb3ojo79hxVFypd6wTVLQR6kO3d6Z_Z2uIcktINA_foIdsJBSGj7wxozrFF7_O1BHZ2kElMHSE9nYUClVLvc0Ai1r_ThcgpO4faKY3F46002XsQTX7eJ/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABp0AFeY-gEedXSbcZnVfD6dM66d9iUhecZ5RG6c4OPSiln1Z8BraE0K2oabc6zQmxJ_E_VW4Pq0LBo_8mmbBNOy7UNn8hArZ2MzrnSFFs6Y8r0UJiEPYSeeGDEe6a1LIuOjFGMfu10AJiF5JiUp0D0wnZni9LAfsCLEmHjDanB9jFAvqmwyyMfUW3MVimF9vZUQARfvUQapF0k_TkoDJH8cMGzP4pqYbB9-vJTa2-SBoq_vj3hsn_mIc0lqrgcimyovcxgQC8IS8WPfu4riY-bLLkkdY-TyMoFV714_x6Goo0J2sd6EeckScBJXwXNTiecDqK1r0ti0KfIxZRrFq79MVRRCVh1ZY0FqwF2fUUZfIWExRGcJi6Nsd3ZxjumkOOUVSysKCXZQF4X-GH-ybSKf/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABocIOeCX-_uG2W7QNMak4-qgM76S4pFD0Z7vsLxEUu-jTsph6YDTIsQkKCa-sTdA5ok2vsqZ72yD9PkVD-8vWmkimJxX69ZEAHI8jjAQWlvvhQdIRnK5DuK6GhFOKak1KBAmxNPRPQieeByMSPZLBc5rDEhg1fjpAEWJZttP7gIhYS8mrMMqcoUaN2cTRnt6bqU6V8ym0XaIGcu0rGAXOw3fxA6BXbHcNRo7BaRIJaZs4J_-ZPwfRK-oRiS1CKQoERHMfNmGzeFxhhUXjLGrDPz23_wVwxzMtpAC_pnwDG6pLQtbiX8V_krkegVqNQl03mOT6jyF7Yu4TKILboHcUkqjksIJbRudXKijGTWdQyJyANiZLy822yXTarho-37WoJlXoWf63ylwXK-TApxEVnD/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABosfslANEbnTF3WW_EjzYthOwfOIEHLqbUpPN9TGg61jni49wLVOdsqXb0llIAtIa0TKcMOaIgcpA0mmtnVz13oAwsEdhr-D3WsE3_KNu6K4w0K96wWLvvjBH8SKeRyty7-jN3N0T23VQga-alzJQ1AIWF57I6dpuhDd02vHpdJlDgpxQBNfk0R5CfzVyf_wv4dxnMRNIO7IEqaQeUK300tAInhyx_dh0SHOh0gKxIHELyErteg40n2otouamczJvhQGMAoEOTgbDy2JfPmPP1PSfQVukW8rM_43iT9OdPSnbqM3pZcDVHRkFQGib2imdzUhe_xOVMs9WBV5vhkWtHHQ2y-Dv6OROgioC9_sQ19EA8a8BhE62aBuNXBkd85aMOEz5Ww3WX8M21nP4yxTPhH/p.jpeg" alt="">
+
+    </div>
+
+
+    <div id="image3">
+        <img src="https://previews.dropbox.com/p/thumb/ABqTiVJXWwvxZbAqO7GieJc6BxTVWcCUCOePrd2ffaDZIuPZim9ZcFAgpH4RH73clSPGCSqVeucJahT68VjPFhL0BcQBWAapf_lNSI26oevHFbw-HT_MZyaIYkYgrAyfY6Qyf5bga4F6HIEgr6HuTcSTfnhiIB0kPUMWe-ypW5w-Hbsu-DdRvqI-MN58feZOuw5JVjYc4xoXl8G7L1IoI-S5tRBS3Kn8U9qTx5emdqsjAgNZXfY7kDgzP8EAgY2HcuNqm6JCuRXzfa2XT-b9IESzkXfqwlzPoO8Q19xcncrUgoydhpLMlVPQU8w9bstZnyZm9gVE6RRSCu-nOMCR2ET_NKPj7vpol6gKKjSZQxKC2E5ODHm9yDF5A-cPsjf__76bEqN2AfD1SeWPfQXXKxSh/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABqu7R2900wpwWfuGxe8IxFhynC0bIKph3_86q2hEWNcEPXt4Yz3ri4LLGSIcHfo1qkx6uHx0sKwUTHZia3KEsVnJ4aZPrK9ieuDXQJwVqKeRzW0wb3KJYxPxUb9Yhgot4llZenLSMcoRZg3UKAaRBKacJO3rf2e9pvCGqBrWbuRsmMk16936pQ1ax_idRMoGXfTiSnAZUSq96cM_flg8Qz6gCN8CVnklokgcUk29Az2a_ONXGcVSrmZJbRyohfGtP5KA91RCvVltoTmMlxkX8gHjrsLUPx9PWz5pfkuEpP_YDrbmIr73ft9nC97iHlbnF2vcjB1hluMkmXyP9zJFPxZ6pHYfyGAmIOWrLmDeRJ-ea62rvcoLyhWDzih7UGFCLo/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABrGvevuBsmYdSd-ACjvTMK3HdpPokZKWEosCl0isb9hGy6CZSFA_VqNxYL3ltvRKA5-alTBOzNH5Ty9RY2CjuHjd30RHPmM-0p45RvW7sOnTx7Hy35PM0cP8wr7lpxtPU2cfySwuAk4UFLn2_ei7wYw2f1LxOPLSIAT0zmpCCwij_Hziy03w6EOxtcAwN4TUQk8SrgsCUOTnlgiqePy6O5-ii0xB9tgQ0PzUkFFvYVXuL7aW3pwX5MTfCoDnv-B85MAAIUiNO-t7NpI5c1ayeGfGcDkQLclv_Cz5Bod9oZcUOXosUQ70nJiyTK2ekwOlk58d4A8MegkZhXNj-viOb2AY_5EiYXE1b42VRJ1uXKP5XIfjWqwV7u_er_OyjbTt4PGPHylpoInZ2qUBE2-OqOw/p.jpeg" alt="">
+        <img src="https://previews.dropbox.com/p/thumb/ABqDCv5BMJeuYe8xrtcnN05Tta6LuXbbu_7TnUk37VzNfOwQSU7XIa6CPWWk7i1kTMxilO22j1GFgg9UZfMY46j4unWLaxTMVnGNF0pyoyoBYIa5t2Qtk2TZoPZptZTj7iK_64TyxUMHVzPoqr5TjZbsOgu4fmtYQtazRbYsmIRkZn2iywbTYFoqIS3n37eCVUVNZV_Ch-JGiZH1T0f52m_SH3AnmKIh89zclwq2vNZCx65yh2D_2msz8SpxIXPhUJcH7deN9hyWFrQd0W6bO5U-Y8W6ggwHd4RMDbbJwo4ufAWRaUoOPfqDYMPo1c-WB07WGtgh9BO-jtOa0vI_ByHglnzlx7CIt5_dmJNbo4A-e8ihpA4qCuw-zgdbJk0NeQ28Y4rBwiuY_coI39oWc3tl/p.jpeg" alt="">
+
+    </div>
+
+
+
+    <div id="midsection">
+        <p>Shop New  Arrivals</p>
+        <div>
+            <button><b>Shop Women</b> </button>
+            <button><b>Shop Men</b></button>
+            <button><b>Shop Girls</b></button>
+            <button><b>Shops Boys</b></button>
+        </div>
+    </div>
+
+
+   <div id="bottom1">
+    <div>
+        <div id="bottom_first">
+            <img src="https://www.jcrew.com/brand_creative/2022/202204-Apr/logo_jcrew_collective_20220315_blk.png?imformat=generic" alt="">
+            <h3>Meet our creative community →</h3>
+        </div>
+
+
+        <div id="bottom_mid">
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep/2022sep_0816_hp_w_img7.jpg" alt="">
+                <p>Flora & fauna</p>
+                <h2>A Print Remix with Marjon Carlos</h2>
+                <h4>Shop her story</h4>
+
+            </div>
+
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep/2022sep_0816_hp_w_img8.jpg" alt="">
+                <p>Polished meets playful</p>
+                <h2>The Work Remix with Lucy Williams</h2>
+                <h4>Shop her story</h4>
+                
+            </div>
+            
+        </div>
+
+        <p>More Stories</p>
+
+
+        <div id="bottom-end">
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep/2022sep_0816_hp_w_img9new.jpg">
+                <h2>The edit: fall florals</h2>
+                <p>Shop the print story</p>
+            </div>
+
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep/2022sep_0816_hp_w_img10.jpg">
+                <h2>Most wanted: the Louisa tweed lady jacket</h2>
+                <p>Get a closer look</p>
+            </div>
+
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep/2022sep_0816_hp_w_img11.jpg">
+                <h2>Creative Spirit Series: Eveliina Vintage X J.Crew</h2>
+                <p>Shop the collab</p>
+            </div>
+
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/08-Aug2/2022aug_0802_hp_w_img14.jpg">
+                <h2>Design Try-ons: the August Collection</h2>
+                <p>Shop the video</p>
+            </div>
+
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/08-Aug/2022aug_0726_hp_w_img13.jpg">
+                <h2>The edit: fall florals</h2>
+                <p>Shop the roundup</p>
+            </div>
+
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/08-Aug/2022aug_0726_hp_w_img14.jpg">
+                <h2>Creative Spirits Series: Monrowe™ X J.Crew</h2>
+                <p>Meet founder Dani Evans</p>
+            </div>
+
+        </div>
+        
+        
+    </div>
+
+
+   </div>
+
+   <p>You’ll Also Love</p>
+
+   <div id="final1">
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BF679_DM6035?wid=376">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/L6602_BK0001_m?wid=376">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BF168_GR7106?wid=376">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BE554_BL7780?wid=376">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BF450_GY5218_m?wid=376">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/AZ955_EE0615?wid=376">
+    </div>
+   </div>
+
+
+   <p>More you need to see</p>
+
+
+   <div id="final2">
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BK961_GR7805_m?wid=416">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BL084_PT0317_m?wid=416">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BJ571_NA6157_m?wid=416">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BJ987_BL7755_m?wid=416">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BK251_BK0001_m?wid=416">
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BK656_DM6650_m?wid=416">
+    </div>
+   </div>
+
+
+   <hr>
+   <div id="footer">
+     <a><i class="fa-brands fa-twitter"></i>  @jcrew_help</a>  
+     <a><i class="fa-solid fa-phone"></i>  1 434 385 5775</a> 
+     <a><i class="fa-solid fa-envelope"></i>  Email Us</a>
+   </div>
+   
+
+
+
+       
+    
+    
+</body>
+</html>
+
+
+

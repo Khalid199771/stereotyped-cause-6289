@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <style>
+        body{
+            background-image: url(https://images8.alphacoders.com/368/thumb-1920-368780.jpg);
+        }
+
+
+
+
+        #sign_in{
+            text-align: center;
+            width:30%;
+            border:1px solid red;
+            margin:auto;
+            margin-top:200px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        input,button{
+            margin-bottom: 30px;
+            width:50%;
+            height:25px;
+        }
+
+        h1,h3{
+            margin-bottom: 50px;
+        }
+
+        hr{
+            margin-bottom: 50px;;
+        }
+
+        button{
+            border:1px solied #999;
+            background-color: white;
+        }
+
+        button:hover{
+            background-color: grey;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div id="sign_in">
+        <form>
+            <h1> Sign In</h1>
+            <input type="email" placeholder="Email Address*" id="email1"><br>
+            <input type="password" placeholder="Password*" id="password1"><br>
+            <button id="login">Sign In Now</button><br>
+            <hr>
+            <h3>Don’t have an account? <a href="signup.html">Sign up now</a></h3>
+        </form>
+        
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("#login").addEventListener("click",logon)
+    let userinfo=JSON.parse(localStorage.getItem("user_sign_info")) || [];
+
+    function logon(){
+        event.preventDefault();
+        let EMAIL1=document.querySelector("#email1").value;
+        let PASSWORD1=document.querySelector("#password1").value;
+
+        if(EMAIL1=="" || PASSWORD1==""){
+            alert("Enter all the details")
+        } else {
+            let login_data=userinfo.filter(function(ele,i){
+            return ele.EMAIL==EMAIL1 && ele.PASSWORD==PASSWORD1
+        })
+        console.log(login_data);
+
+
+        if(login_data.length===0){
+            alert("Wrong Credentials");
+        } else {
+            alert("Login successfull")
+            window.location.assign("index.html");    
+        }
+
+        }
+
+
+        
+    }
+</script>
